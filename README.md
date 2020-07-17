@@ -1,4 +1,4 @@
-# roshi [![Build Status](https://travis-ci.org/soundcloud/roshi.png)](https://travis-ci.org/soundcloud/roshi) [![GoDoc](https://godoc.org/github.com/soundcloud/roshi?status.svg)](http://godoc.org/github.com/soundcloud/roshi)
+# roshi [![Build Status](https://travis-ci.com/yujunz/roshi.svg?branch=master)](https://travis-ci.com/yujunz/roshi) [![PkgGoDoc](https://pkg.go.dev/badge/github.com/yujunz/roshi)](https://pkg.go.dev/github.com/yujunz/roshi)
 
 Roshi implements a time-series event storage via a LWW-element-set CRDT with
 limited inline garbage collection. Roshi is a stateless, distributed layer on
@@ -37,11 +37,11 @@ Next, we will explain the system design.
 
 ## CRDT
 
-CRDTs (conflict-free replicated data types) are data types on which the same 
-set of operations yields the same outcome, regardless of order of execution 
-and duplication of operations. This allows data convergence without the need 
-for consensus between replicas. In turn, this allows for easier implementation 
-(no consensus protocol implementation) as well as lower latency (no wait-time 
+CRDTs (conflict-free replicated data types) are data types on which the same
+set of operations yields the same outcome, regardless of order of execution
+and duplication of operations. This allows data convergence without the need
+for consensus between replicas. In turn, this allows for easier implementation
+(no consensus protocol implementation) as well as lower latency (no wait-time
 for consensus).
 
 Operations on CRDTs need to adhere [to the following rules][mixu]:
